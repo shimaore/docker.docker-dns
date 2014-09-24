@@ -5,7 +5,7 @@ config.debug = false;
 
 // a fake top level domain
 // appended to all generated hostnames
-config.faketld = "docker.local";
+config.faketld = "docker-local";
 
 // frequency of dns entry refresh from docker containers
 config.pollinterval = 17 * 1000;
@@ -21,10 +21,10 @@ config.dockers  = [
     publicip: "10.20.0.100", 
 
     // the public name is to give this docker instance it's own namespace
-    publicname: "public.dockerA",
+    publicname: "public.localhost",
 
     // the local name is to provide a namespace for routing 172.17.0.0 addresses
-    localname: "local.dockerA",
+    localname: "local.localhost",
 
     // dockerode config
     // see: https://github.com/apocas/dockerode
