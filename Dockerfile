@@ -1,6 +1,8 @@
 FROM shimaore/nodejs
 
-RUN apt-get install -y supervisor git
+RUN apt-get update && apt-get install -y \
+  git \
+  supervisor
 
 RUN mkdir -p /var/log/supervisor
 COPY ./config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
